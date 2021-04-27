@@ -23,9 +23,6 @@ export class NavComponent implements OnInit {
     // tslint:disable-next-line: deprecation
     this.accountService.login(this.model).subscribe(respose => {
       this.router.navigateByUrl('/members');
-    }, error => {
-      console.log(error);
-      this.toastr.error(error.error);
     });
   }
 
